@@ -1,0 +1,16 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:IMP.ViewModels"
+             x:Class="IMP.Views.SectionsPage">
+    <ContentPage.BindingContext>
+        <viewmodels:SectionsViewModel />
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout>
+        <Entry Text="{Binding SectionName}" Placeholder="Nazwa sekcji" />
+        <Entry Text="{Binding StartTime}" Placeholder="Czas rozpoczęcia (HH:MM)" />
+        <Entry Text="{Binding Duration}" Placeholder="Czas trwania (min)" />
+        <Entry Text="{Binding SelectedDays}" Placeholder="Wybrane dni" />
+        <Button Text="Dodaj sekcję" Command="{Binding AddSectionCommand}" />
+    </VerticalStackLayout>
+</ContentPage>
